@@ -66,6 +66,11 @@ The blockquote element represents content that is quoted from another source, op
 </html>
 ```
 
+```clj
+(def adder [a b]
+  (+ a b))
+```
+
 ## List Types
 
 #### Ordered List

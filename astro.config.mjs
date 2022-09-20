@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://duanebester.github.io',
+	site: 'https://duanebester.com',
 	integrations: [mdx(), sitemap()],
 });
