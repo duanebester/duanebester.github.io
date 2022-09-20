@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro'
 import ThemeToggleButton from './ThemeToggleButton'
-import { IoLogoGithub } from 'react-icons/io5/index'
+import { IoLogoGithub, IoLogoTwitter } from 'react-icons/io5/index'
 import { HOMEPAGE_URL, SITE_TITLE } from '../config'
 ---
 
@@ -15,8 +15,8 @@ import { HOMEPAGE_URL, SITE_TITLE } from '../config'
         <HeaderLink href={HOMEPAGE_URL}>Home</HeaderLink>
         <HeaderLink href="/blog">Blog</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
-        <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank"
-          >Twitter</HeaderLink
+        <HeaderLink href="https://twitter.com/duanebester" target="_blank"
+          ><IoLogoTwitter/> Twitter</HeaderLink
         >
         <HeaderLink href="https://github.com/duanebester" target="_blank"
           ><IoLogoGithub /> GitHub</HeaderLink
