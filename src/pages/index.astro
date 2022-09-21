@@ -3,8 +3,10 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import Body from '../components/Body.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 import Content from '../components/Content.astro'
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+
 ---
 
 <!DOCTYPE html>
@@ -15,12 +17,9 @@ import Content from '../components/Content.astro'
   <Body>
     <Header title={SITE_TITLE} />
     <main class="pt-[56px]">
-      <h1 class="font-mplus text-center">What I use</h1>
-	  <Content>
-		<section>
-			<p class="mb-8 indent-4">Content</p>
-		</section>
-	  </Content>
+      <Content className="pt-6">
+        <span>hi :)</span>
+      </Content>
     </main>
     <Footer />
   </Body>

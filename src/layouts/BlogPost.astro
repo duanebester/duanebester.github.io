@@ -20,27 +20,31 @@ const {
 } = Astro.props
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
-      }
-    </style>
   </head>
 
   <Body>
     <Header />
     <main class="pt-[56px]">
-      <Content>
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <h1 class="title">{title}</h1>
+      <Content className="pt-6">
+        <div class="mb-8">
+          {
+            heroImage && (
+              <img
+                class="border border-slate-300 dark:border-zinc-700 rounded-xl"
+                width={720}
+                height={360}
+                src={heroImage}
+                alt=""
+              />
+            )
+          }
+        </div>
+        <h1 class="text-3xl my-1 font-mplus">{title}</h1>
+        <span>{description}</span>
         {pubDate && <time>{pubDate}</time>}
         {
           updatedDate && (
@@ -49,8 +53,11 @@ const {
             </div>
           )
         }
-        <hr />
+        <hr class="border-top border-zinc-400 my-4" />
         <slot />
+        <span
+          class="underline underline-offset-2 hover:text-orange-500 decoration-orange-500 text-2xl"
+        ></span>
       </Content>
     </main>
     <Footer />
